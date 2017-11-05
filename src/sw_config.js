@@ -37,29 +37,31 @@ const CACHE_NAMES = [
 const urlsToCache = {
     "general-cache-v": [],
     "pages-cache-v": [
-        /\.html/,
-        /\.phtml/,
-        /\.php/
+        /\.html/gi,
+        /\.phtml/gi,
+        /\.php/gi,
+        /[a-z0-9]$/gi
     ],
     "css-cache-v": [
-        /\.css/
+        /\.css/gi
     ],
     "js-cache-v": [
-        /\.js/,
-        /\.ts/
+        /\.js/gi,
+        /\.ts/gi,
+        /\.jsx/gi
     ],
     "img-cache-v": [
-        /\.png/,
-        /\.jpg/,
-        /\.webp/,
-        /\.gif/
+        /\.png/gi,
+        /\.jpg/gi,
+        /\.webp/gi,
+        /\.gif/gi
     ],
     "video-cache-v": [
-        /\.ts/,
-        /\.mp4/,
-        /\.m3u8/,
-        /\.m4s/,
-        /\.mpd/
+        /\.ts/gi,
+        /\.mp4/gi,
+        /\.m3u8/gi,
+        /\.m4s/gi,
+        /\.mpd/gi
     ]
 };
 
@@ -85,7 +87,7 @@ const preCache = {};
  * @type {RegExp[]}
  */
 const updateWhitelist = [
-    /.*/
+    /.*/gi
 ];
 
 /**
