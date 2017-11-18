@@ -13,12 +13,13 @@
       "guide": "./README.md"
     }
   ],
-  "debug":true,
+  "no-min": true,
+  "debug": true,
   "dest": "./docs",
   "app": {
     "title": "Service Worker Docs",
     "server": "github",
-    "routing": "query",
+    "routing": "path",
     "entrance": "content:guide"
   },
   "template": {
