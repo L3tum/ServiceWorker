@@ -1,0 +1,36 @@
+{
+  "config": {
+    "VERSION": "1.0.0",
+    "developer": true,
+    "CACHE_NAME": "myCache-v",
+    "URLS_TO_CACHE_WHITELIST": [
+      ".*"
+    ],
+    "URLS_TO_CACHE_BLACKLIST": [],
+    "PRE_CACHE": [],
+    "UPDATE_WHITELIST": [
+      ".*"
+    ],
+    "UPDATE_BLACKLIST": [],
+    "STRATEGY": 2,
+    "STRATEGY_CALLBACKS": {
+      "0": "networkFirst",
+      "1": "cacheFirst",
+      "2": "staleWhileRevalidate"
+    },
+    "FETCH_CALLBACKS": {},
+    "UPDATE_STRATEGY": 1,
+    "UPDATE_CALLBACKS": {
+      "0": null,
+      "1": "requestFileUpdate",
+      "2": "requestServerHash"
+    },
+    "HASH_ADDRESS": "/getHash",
+    "MESSAGE_TYPES": {
+      "0": "receivedUpdate",
+      "1": "receivedConfigUpdate",
+      "2": "methodToRegister"
+    },
+    "METHODS": {}
+  }
+}

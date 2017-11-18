@@ -1,17 +1,22 @@
 /* global __dirname, require, module*/
 
 const webpack = require("webpack");
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+const minifyPlugin = require("babel-minify-webpack-plugin");
 const path = require("path");
 const env = require("yargs").argv.env; // use --env with webpack 2
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 let libraryName = "sw";
 
 let plugins = [], outputFile;
 
+plugins.push(new CopyPlugin([
+    {from: "./src/sw_config.json", to: "./sw_config.json"}
+]));
+
 if (env === "build") {
-    plugins.push(new UglifyJsPlugin({minimize: true}));
+    plugins.push(new minifyPlugin({}, {}));
     outputFile = libraryName + ".min.js";
 } else {
     plugins.push(new BrowserSyncPlugin({
@@ -28,10 +33,19 @@ if (env === "build") {
         // and let Webpack Dev Server take care of this
         reload: false
     }));
-    outputFile = libraryName + ".js";
+    plugins.push(new minifyPlugin({}, {}));
+    outputFile = libraryName + ".min.js";
 }
 
+console.log(__dirname);
+
 const config = {
+    // the webpack config just works
+    target: 'node',
+    node: {
+        __dirname: false,
+        __filename: false,
+    },
     entry: __dirname + "/src/index.js",
     devtool: "source-map",
     output: {
@@ -47,12 +61,12 @@ const config = {
             {
                 test: /(\.jsx|\.js)$/,
                 loader: "babel-loader",
-                exclude: /(node_modules|bower_components)/
+                exclude: /(node_modules|bower_components|sw_config\.js)/
             },
             {
                 test: /(\.jsx|\.js)$/,
                 loader: "eslint-loader",
-                exclude: /node_modules/
+                exclude: /node_modules/,
             }
         ]
     },
