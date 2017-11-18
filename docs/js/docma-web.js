@@ -4990,6 +4990,7 @@ var docma = {"routes":[{"id":"api:","type":"api","name":"_def_","path":"/?api","
      *         Function to be executed when the rendering is complete.
      */
     function _render(dustTemplateName, callback) {
+        console.log(dustTemplateName);
         // render docma main template
         dust.render(dustTemplateName, docma, function (err, compiledHTML) {
             if (err) throw err;
