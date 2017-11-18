@@ -20,7 +20,8 @@
     "title": "Service Worker Docs",
     "server": "github",
     "routing": "path",
-    "entrance": "content:guide"
+    "entrance": "content:guide",
+    "base": "/ServiceWorker"
   },
   "template": {
     "path": "default"
