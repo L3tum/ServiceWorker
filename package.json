@@ -1,6 +1,6 @@
 {
   "name": "ServiceWorker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Advanced PlugNPlay ServiceWorker",
   "main": "lib/sw.js",
   "scripts": {
@@ -40,7 +40,7 @@
     "service-worker",
     "umd"
   ],
-  "author": "Tom Pauly",
+  "author": "Tom 'L3tum' Pauly",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/L3tum/ServiceWorker/issues"
