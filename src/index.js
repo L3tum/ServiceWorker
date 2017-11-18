@@ -65,7 +65,7 @@ const merge = function (standard, user) {
 
 /**
  * Converts a byte array to a string
- * @param array {[]}
+ * @param array {number}
  * @returns {*}
  */
 const bin2String = async function (array) {

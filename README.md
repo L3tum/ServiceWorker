@@ -28,3 +28,5 @@ Unfortunately given the nature of these tests I had to add some await keywords.
 Overall, what might be already obvious, but I was curious if CacheStorage `caches` had any type of advanced lookup mechanism, is that using just one giant cache is the best solution, both in read and write it seems. 
 
 [Here](https://jsperf.com/use-separate-caches/1) is the benchmark.
+
+&copy; Tom "L3tum" Pauly
