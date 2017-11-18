@@ -1466,6 +1466,7 @@ var helpers = {
    * @param type coerce all truth test keys without an explicit type to this type
    */
   "select": function(chunk, context, bodies, params) {
+      console.log(bodies);
     var body = bodies.block,
         state = {};
 
@@ -4990,7 +4991,6 @@ var docma = {"routes":[{"id":"api:","type":"api","name":"_def_","path":"/?api","
      *         Function to be executed when the rendering is complete.
      */
     function _render(dustTemplateName, callback) {
-        console.log(dustTemplateName);
         // render docma main template
         dust.render(dustTemplateName, docma, function (err, compiledHTML) {
             if (err) throw err;
