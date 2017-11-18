@@ -3,6 +3,7 @@ JavaScript Service Worker Implementation and Research
 
 The Implementation will be completely plugin-and-ready once it's done.
 
+* * *
 
 ## Research
 
@@ -29,4 +30,6 @@ Overall, what might be already obvious, but I was curious if CacheStorage `cache
 
 [Here](https://jsperf.com/use-separate-caches/1) is the benchmark.
 
-&copy; Tom "L3tum" Pauly
+***
+
+###### &copy; Tom "L3tum" Pauly

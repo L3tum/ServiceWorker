@@ -3,6 +3,7 @@
 <hr />
 <p>JavaScript Service Worker Implementation and Research</p>
 <p>The Implementation will be completely plugin-and-ready once it's done.</p>
+<hr>
 <h2 id="research">Research</h2>
 <p>So I was testing some stuff out regarding caching and wondered if it'd be faster to split the cache, and if yes, to do a manual lookup before matching in cache.</p>
 <h4 id="1-question-">1. Question:</h4>
@@ -17,5 +18,6 @@ Maybe it would be faster to store the exact URLs in the lookup array, but then y
 Unfortunately given the nature of these tests I had to add some await keywords. </p>
 <p>Overall, what might be already obvious, but I was curious if CacheStorage <code>caches</code> had any type of advanced lookup mechanism, is that using just one giant cache is the best solution, both in read and write it seems. </p>
 <p><a href="https://jsperf.com/use-separate-caches/1">Here</a> is the benchmark.</p>
-<p>© Tom "L3tum" Pauly</p>
+<hr>
+<h6 id="-copy-tom-l3tum-pauly">© Tom "L3tum" Pauly</h6>
 </body></html>
