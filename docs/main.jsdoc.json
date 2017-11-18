@@ -1,0 +1,966 @@
+[
+  {
+    "comment": "/**\n                         * File is something else, just leave it\n                         */",
+    "meta": {
+      "range": [
+        10871,
+        10883
+      ],
+      "filename": "index.js",
+      "lineno": 350,
+      "columnno": 24,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000901",
+        "name": "abort",
+        "type": "Literal",
+        "funcscope": "<anonymous>",
+        "value": true,
+        "paramnames": []
+      }
+    },
+    "description": "File is something else, just leave it",
+    "name": "abort",
+    "longname": "<anonymous>~abort",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "$longname": "abort"
+  },
+  {
+    "comment": "/**\n                         * File is something else, just leave it\n                         */",
+    "meta": {
+      "range": [
+        16409,
+        16421
+      ],
+      "filename": "index.js",
+      "lineno": 483,
+      "columnno": 24,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001261",
+        "name": "abort",
+        "type": "Literal",
+        "funcscope": "<anonymous>",
+        "value": true,
+        "paramnames": []
+      }
+    },
+    "description": "File is something else, just leave it",
+    "name": "abort",
+    "longname": "<anonymous>~abort",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "$longname": "abort"
+  },
+  {
+    "comment": "/**\n * This is called every time the page is loaded. Therefore, we want to keep it lightweight\n * @param event\n */",
+    "meta": {
+      "range": [
+        22842,
+        25215
+      ],
+      "filename": "index.js",
+      "lineno": 644,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001748",
+        "name": "activateEvent",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "This is called every time the page is loaded. Therefore, we want to keep it lightweight",
+    "params": [
+      {
+        "name": "event"
+      }
+    ],
+    "name": "activateEvent",
+    "longname": "activateEvent",
+    "kind": "function",
+    "scope": "global",
+    "$longname": "activateEvent"
+  },
+  {
+    "comment": "/**\n * Converts a byte array to a string\n * @param array {number}\n * @returns {*}\n */",
+    "meta": {
+      "range": [
+        2184,
+        2276
+      ],
+      "filename": "index.js",
+      "lineno": 71,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000103",
+        "name": "bin2String",
+        "type": "FunctionExpression"
+      }
+    },
+    "description": "Converts a byte array to a string",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "name": "array"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "*"
+          ]
+        }
+      }
+    ],
+    "name": "bin2String",
+    "longname": "bin2String",
+    "kind": "function",
+    "scope": "global",
+    "async": true,
+    "$longname": "bin2String"
+  },
+  {
+    "comment": "/**\n             * Cache did not find file\n             */",
+    "meta": {
+      "range": [
+        12817,
+        12831
+      ],
+      "filename": "index.js",
+      "lineno": 399,
+      "columnno": 16,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001029",
+        "name": "cachedInstance"
+      }
+    },
+    "description": "Cache did not find file",
+    "name": "cachedInstance",
+    "longname": "<anonymous>~cachedInstance",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "params": [],
+    "$longname": "cachedInstance"
+  },
+  {
+    "comment": "/**\n             * Cache did not find file\n             */",
+    "meta": {
+      "range": [
+        18533,
+        18547
+      ],
+      "filename": "index.js",
+      "lineno": 536,
+      "columnno": 16,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001405",
+        "name": "cachedInstance"
+      }
+    },
+    "description": "Cache did not find file",
+    "name": "cachedInstance",
+    "longname": "<anonymous>~cachedInstance",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "params": [],
+    "$longname": "cachedInstance"
+  },
+  {
+    "comment": "/**\n * Caches a response given the request/URL\n * @param request {Request|string}\n * @param response {Response}\n */",
+    "meta": {
+      "range": [
+        4292,
+        4622
+      ],
+      "filename": "index.js",
+      "lineno": 154,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000322",
+        "name": "cacheResponse",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "url": "cacheResponse~url",
+        "": null
+      }
+    },
+    "description": "Caches a response given the request/URL",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Request",
+            "string"
+          ]
+        },
+        "name": "request"
+      },
+      {
+        "type": {
+          "names": [
+            "Response"
+          ]
+        },
+        "name": "response"
+      }
+    ],
+    "name": "cacheResponse",
+    "longname": "cacheResponse",
+    "kind": "function",
+    "scope": "global",
+    "async": true,
+    "$longname": "cacheResponse"
+  },
+  {
+    "comment": "/**\n * Provide cache and if not present provide fetch.\n * Does not update automatically\n * @param event {Event}\n * @returns {Promise.<Response>|*}\n */",
+    "meta": {
+      "range": [
+        5485,
+        7258
+      ],
+      "filename": "index.js",
+      "lineno": 201,
+      "columnno": 0,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000445",
+        "name": "callbacks[\"cacheFirst\"]",
+        "type": "FunctionExpression",
+        "paramnames": [
+          "event"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Provide cache and if not present provide fetch.\nDoes not update automatically",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Event"
+          ]
+        },
+        "name": "event"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Response>",
+            "*"
+          ]
+        }
+      }
+    ],
+    "name": "\"cacheFirst\"",
+    "longname": "callbacks.\"cacheFirst\"",
+    "kind": "function",
+    "memberof": "callbacks",
+    "scope": "static",
+    "$longname": "callbacks.\"cacheFirst\""
+  },
+  {
+    "comment": "/**\n * Network first strategy.\n * Since it fetches first-thing it won't need to update\n * @param event\n * @returns {Promise.<Response>|*}\n */",
+    "meta": {
+      "range": [
+        7403,
+        8044
+      ],
+      "filename": "index.js",
+      "lineno": 259,
+      "columnno": 0,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000586",
+        "name": "callbacks[\"networkFirst\"]",
+        "type": "FunctionExpression",
+        "paramnames": [
+          "event"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Network first strategy.\nSince it fetches first-thing it won't need to update",
+    "params": [
+      {
+        "name": "event"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Response>",
+            "*"
+          ]
+        }
+      }
+    ],
+    "name": "\"networkFirst\"",
+    "longname": "callbacks.\"networkFirst\"",
+    "kind": "function",
+    "memberof": "callbacks",
+    "scope": "static",
+    "$longname": "callbacks.\"networkFirst\""
+  },
+  {
+    "comment": "/**\n * Requests a file from the internet and checks if the cached config.VERSION is different\n * @param url {string}\n */",
+    "meta": {
+      "range": [
+        9759,
+        15202
+      ],
+      "filename": "index.js",
+      "lineno": 323,
+      "columnno": 0,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000821",
+        "name": "callbacks[\"requestFileUpdate\"]",
+        "type": "FunctionExpression",
+        "paramnames": [
+          "url"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Requests a file from the internet and checks if the cached config.VERSION is different",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "url"
+      }
+    ],
+    "name": "\"requestFileUpdate\"",
+    "longname": "callbacks.\"requestFileUpdate\"",
+    "kind": "function",
+    "memberof": "callbacks",
+    "scope": "static",
+    "$longname": "callbacks.\"requestFileUpdate\""
+  },
+  {
+    "comment": "/**\n * Requests the hash of a specific file from a specified URL via POST\n * @param url\n */",
+    "meta": {
+      "range": [
+        15297,
+        21120
+      ],
+      "filename": "index.js",
+      "lineno": 456,
+      "columnno": 0,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001181",
+        "name": "callbacks[\"requestServerHash\"]",
+        "type": "FunctionExpression",
+        "paramnames": [
+          "url"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Requests the hash of a specific file from a specified URL via POST",
+    "params": [
+      {
+        "name": "url"
+      }
+    ],
+    "name": "\"requestServerHash\"",
+    "longname": "callbacks.\"requestServerHash\"",
+    "kind": "function",
+    "memberof": "callbacks",
+    "scope": "static",
+    "$longname": "callbacks.\"requestServerHash\""
+  },
+  {
+    "comment": "/**\n * Stale while revalidate strategy.\n * Serve a, potentially, outdated file but then check for updates with a fallback to network\n * @param event\n * @returns {Promise.<Response>|*}\n */",
+    "meta": {
+      "range": [
+        8235,
+        9635
+      ],
+      "filename": "index.js",
+      "lineno": 283,
+      "columnno": 0,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000666",
+        "name": "callbacks[\"staleWhileRevalidate\"]",
+        "type": "FunctionExpression",
+        "paramnames": [
+          "event"
+        ]
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Stale while revalidate strategy.\nServe a, potentially, outdated file but then check for updates with a fallback to network",
+    "params": [
+      {
+        "name": "event"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Response>",
+            "*"
+          ]
+        }
+      }
+    ],
+    "name": "\"staleWhileRevalidate\"",
+    "longname": "callbacks.\"staleWhileRevalidate\"",
+    "kind": "function",
+    "memberof": "callbacks",
+    "scope": "static",
+    "$longname": "callbacks.\"staleWhileRevalidate\""
+  },
+  {
+    "comment": "/**\n * Checks for a given URL if it is allowed to be cached\n * @param url\n * @returns {Promise<boolean>}\n */",
+    "meta": {
+      "range": [
+        2960,
+        3514
+      ],
+      "filename": "index.js",
+      "lineno": 102,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000178",
+        "name": "canBeCached",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "whitelisted": "canBeCached~whitelisted",
+        "blacklisted": "canBeCached~blacklisted",
+        "regex": "canBeCached~regex"
+      }
+    },
+    "description": "Checks for a given URL if it is allowed to be cached",
+    "params": [
+      {
+        "name": "url"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<boolean>"
+          ]
+        }
+      }
+    ],
+    "name": "canBeCached",
+    "longname": "canBeCached",
+    "kind": "function",
+    "scope": "global",
+    "async": true,
+    "$longname": "canBeCached"
+  },
+  {
+    "comment": "/**\n * Checks if a given URL is allowed to be updated\n * @param url\n * @returns {Promise<boolean>}\n */",
+    "meta": {
+      "range": [
+        3626,
+        4167
+      ],
+      "filename": "index.js",
+      "lineno": 128,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000250",
+        "name": "canBeUpdated",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "whitelisted": "canBeUpdated~whitelisted",
+        "blacklisted": "canBeUpdated~blacklisted",
+        "regex": "canBeUpdated~regex"
+      }
+    },
+    "description": "Checks if a given URL is allowed to be updated",
+    "params": [
+      {
+        "name": "url"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<boolean>"
+          ]
+        }
+      }
+    ],
+    "name": "canBeUpdated",
+    "longname": "canBeUpdated",
+    "kind": "function",
+    "scope": "global",
+    "async": true,
+    "$longname": "canBeUpdated"
+  },
+  {
+    "comment": "/**\n * Checks for updates\n */",
+    "meta": {
+      "range": [
+        25479,
+        26083
+      ],
+      "filename": "index.js",
+      "lineno": 708,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001984",
+        "name": "checkUpdate",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "isUpdating": "checkUpdate~isUpdating",
+        "url": "checkUpdate~url",
+        "": null,
+        "checkUpdateTimeout": "checkUpdate~checkUpdateTimeout"
+      }
+    },
+    "description": "Checks for updates",
+    "name": "checkUpdate",
+    "longname": "checkUpdate",
+    "kind": "function",
+    "scope": "global",
+    "params": [],
+    "async": true,
+    "$longname": "checkUpdate"
+  },
+  {
+    "comment": "/**\n             * Cache did not find anything\n             */",
+    "meta": {
+      "range": [
+        6626,
+        6673
+      ],
+      "filename": "index.js",
+      "lineno": 233,
+      "columnno": 16,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000543",
+        "name": "clonedReqForCache",
+        "type": "CallExpression",
+        "value": ""
+      }
+    },
+    "description": "Cache did not find anything",
+    "name": "clonedReqForCache",
+    "longname": "<anonymous>~clonedReqForCache",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "params": [],
+    "$longname": "clonedReqForCache"
+  },
+  {
+    "comment": "/**\n                     * Cache response\n                     */",
+    "meta": {
+      "range": [
+        7035,
+        7079
+      ],
+      "filename": "index.js",
+      "lineno": 243,
+      "columnno": 24,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000571",
+        "name": "clonedRespForCache",
+        "type": "CallExpression",
+        "value": ""
+      }
+    },
+    "description": "Cache response",
+    "name": "clonedRespForCache",
+    "longname": "<anonymous>~clonedRespForCache",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "params": [],
+    "$longname": "clonedRespForCache"
+  },
+  {
+    "comment": "/**\n                     * Cache response\n                     */",
+    "meta": {
+      "range": [
+        6308,
+        6352
+      ],
+      "filename": "index.js",
+      "lineno": 222,
+      "columnno": 24,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000526",
+        "name": "clonedRespForCache",
+        "type": "CallExpression",
+        "value": ""
+      }
+    },
+    "description": "Cache response",
+    "name": "clonedRespForCache",
+    "longname": "<anonymous>~clonedRespForCache",
+    "kind": "member",
+    "memberof": "<anonymous>",
+    "scope": "inner",
+    "params": [],
+    "$longname": "clonedRespForCache"
+  },
+  {
+    "comment": "/**\n * The config to use\n */",
+    "meta": {
+      "range": [
+        1276,
+        1282
+      ],
+      "filename": "index.js",
+      "lineno": 34,
+      "columnno": 4,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000015",
+        "name": "config"
+      }
+    },
+    "description": "The config to use",
+    "name": "config",
+    "longname": "config",
+    "kind": "member",
+    "scope": "global",
+    "params": [],
+    "$longname": "config"
+  },
+  {
+    "comment": "/**\n * Responds to a fetch event received\n * @param event\n */",
+    "meta": {
+      "range": [
+        26154,
+        26997
+      ],
+      "filename": "index.js",
+      "lineno": 732,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100002060",
+        "name": "fetchEvent",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "checkUpdateTimeout": "fetchEvent~checkUpdateTimeout",
+        "": null
+      }
+    },
+    "description": "Responds to a fetch event received",
+    "params": [
+      {
+        "name": "event"
+      }
+    ],
+    "name": "fetchEvent",
+    "longname": "fetchEvent",
+    "kind": "function",
+    "scope": "global",
+    "$longname": "fetchEvent"
+  },
+  {
+    "comment": "/**\n * Fetches a request only if we may be online (since navigator.onLine is funky)\n * @param request {Request|string}\n * @param options {{}}\n * @returns {Promise<Response>|null}\n */",
+    "meta": {
+      "range": [
+        4814,
+        5196
+      ],
+      "filename": "index.js",
+      "lineno": 175,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000378",
+        "name": "fetchResponse",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Fetches a request only if we may be online (since navigator.onLine is funky)",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Request",
+            "string"
+          ]
+        },
+        "name": "request"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "name": "options",
+        "defaultvalue": null
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<Response>",
+            "null"
+          ]
+        }
+      }
+    ],
+    "name": "fetchResponse",
+    "longname": "fetchResponse",
+    "kind": "function",
+    "scope": "global",
+    "async": true,
+    "$longname": "fetchResponse"
+  },
+  {
+    "comment": "/**\n * Responds to an install event received.\n * Since install happens after page load, it is important not to be asyncroneous.\n * @param event\n */",
+    "meta": {
+      "range": [
+        21277,
+        22718
+      ],
+      "filename": "index.js",
+      "lineno": 598,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001571",
+        "name": "installEvent",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Responds to an install event received.\nSince install happens after page load, it is important not to be asyncroneous.",
+    "params": [
+      {
+        "name": "event"
+      }
+    ],
+    "name": "installEvent",
+    "longname": "installEvent",
+    "kind": "function",
+    "scope": "global",
+    "$longname": "installEvent"
+  },
+  {
+    "comment": "/**\n * Whether it is currently updating. There may sometimes be multiple times this function is called,\n * so this should prevent weird behaviour\n * @type {boolean}\n */",
+    "meta": {
+      "range": [
+        25422,
+        25440
+      ],
+      "filename": "index.js",
+      "lineno": 703,
+      "columnno": 4,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100001980",
+        "name": "isUpdating",
+        "type": "Literal",
+        "value": false
+      }
+    },
+    "description": "Whether it is currently updating. There may sometimes be multiple times this function is called,\nso this should prevent weird behaviour",
+    "type": {
+      "names": [
+        "boolean"
+      ]
+    },
+    "name": "isUpdating",
+    "longname": "isUpdating",
+    "kind": "member",
+    "scope": "global",
+    "params": [],
+    "$longname": "isUpdating"
+  },
+  {
+    "comment": "/**\n * Hashes a file given its blob\n * @param blob {Blob}\n * @returns {Promise.<string>|*}\n */",
+    "meta": {
+      "range": [
+        2380,
+        2842
+      ],
+      "filename": "index.js",
+      "lineno": 80,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000118",
+        "name": "md5HashBody",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "": null
+      }
+    },
+    "description": "Hashes a file given its blob",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Blob"
+          ]
+        },
+        "name": "blob"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Promise.<string>",
+            "*"
+          ]
+        }
+      }
+    ],
+    "name": "md5HashBody",
+    "longname": "md5HashBody",
+    "kind": "function",
+    "scope": "global",
+    "$longname": "md5HashBody"
+  },
+  {
+    "comment": "/**\n * Helper to merge configs\n * @param standard {Config}\n * @param user {Config}\n * @returns {Config}\n */",
+    "meta": {
+      "range": [
+        1480,
+        2089
+      ],
+      "filename": "index.js",
+      "lineno": 48,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000022",
+        "name": "merge",
+        "type": "FunctionExpression"
+      },
+      "vars": {
+        "idx": "merge~idx",
+        "standard[undefined]": null,
+        "key": "merge~key",
+        "callbacks[undefined]": null
+      }
+    },
+    "description": "Helper to merge configs",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "Config"
+          ]
+        },
+        "name": "standard"
+      },
+      {
+        "type": {
+          "names": [
+            "Config"
+          ]
+        },
+        "name": "user"
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Config"
+          ]
+        }
+      }
+    ],
+    "name": "merge",
+    "longname": "merge",
+    "kind": "function",
+    "scope": "global",
+    "$longname": "merge"
+  },
+  {
+    "comment": "/**\n * Files queued for updating\n * @type {String[]}\n */",
+    "meta": {
+      "range": [
+        1348,
+        1363
+      ],
+      "filename": "index.js",
+      "lineno": 40,
+      "columnno": 6,
+      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+      "code": {
+        "id": "astnode100000018",
+        "name": "updateable",
+        "type": "ArrayExpression",
+        "value": "[]"
+      }
+    },
+    "description": "Files queued for updating",
+    "type": {
+      "names": [
+        "Array.<String>"
+      ]
+    },
+    "name": "updateable",
+    "longname": "updateable",
+    "kind": "constant",
+    "scope": "global",
+    "params": [],
+    "$longname": "updateable"
+  }
+]

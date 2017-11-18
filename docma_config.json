@@ -13,9 +13,13 @@
       "guide": "./README.md"
     }
   ],
+  "debug":true,
   "dest": "./docs",
   "app": {
-    "title": "Service Worker Docs"
+    "title": "Service Worker Docs",
+    "base": "/docs",
+    "server": "github",
+    "entrance": "content:guide"
   },
   "template": {
     "path": "default",
