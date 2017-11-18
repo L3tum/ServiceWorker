@@ -17,7 +17,6 @@
   "dest": "./docs",
   "app": {
     "title": "Service Worker Docs",
-    "base": "/docs",
     "server": "github",
     "entrance": "content:guide"
   },
