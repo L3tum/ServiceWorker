@@ -18,11 +18,10 @@
   "app": {
     "title": "Service Worker Docs",
     "server": "github",
+    "routing": "query",
     "entrance": "content:guide"
   },
   "template": {
-    "path": "default",
-    "routing": "query",
-    "entrance": "content:guide"
+    "path": "default"
   }
 }

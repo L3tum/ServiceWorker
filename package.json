@@ -4,7 +4,8 @@
   "description": "Advanced PlugNPlay ServiceWorker",
   "main": "lib/sw.js",
   "scripts": {
-    "build": "webpack --env build && docma -c ./docma_config.json",
+    "build": "webpack --env build",
+    "build-docs": "docma -c ./docma_config.json",
     "dev-server": "webpack-dev-server --host 0.0.0.0 --port 3100 --colors --client-log-level info --compress --inline --content-base lib/",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
