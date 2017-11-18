@@ -1,8 +1,13 @@
 {
   "src": [
-    "./src/index.js",
-    "./src/config.js",
-    "./docs/sw_config.js",
+    {
+      "main": [
+        "./src/index.js"
+      ],
+      "config": [
+        "./src/config.js"
+      ]
+    },
     "./CHANGELOG.md",
     {
       "guide": "./README.md"
@@ -10,9 +15,11 @@
   ],
   "dest": "./docs",
   "app": {
-    "title": "Service Worker Documentation"
+    "title": "Service Worker Docs"
   },
   "template": {
-    "path": "default"
+    "path": "default",
+    "routing": "query",
+    "entrance": "content:guide"
   }
 }
