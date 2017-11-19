@@ -37,6 +37,8 @@ var config;
 /**
  * Files queued for updating
  * @type {String[]}
+ * @const
+ * @default
  */
 const updateable = [];
 
@@ -45,6 +47,8 @@ const updateable = [];
  * @param standard {Config}
  * @param user {Config}
  * @returns {Config}
+ * @const
+ * @default
  */
 const merge = function (standard, user) {
     for (let idx in user) {
@@ -68,6 +72,8 @@ const merge = function (standard, user) {
  * Converts a byte array to a string
  * @param array {number}
  * @returns {string}
+ * @const
+ * @default
  */
 const bin2String = async function (array) {
     return String.fromCharCode.apply(String, array);
@@ -77,6 +83,8 @@ const bin2String = async function (array) {
  * Hashes a file given its blob
  * @param blob {Blob}
  * @returns {Promise.<string>|*}
+ * @const
+ * @default
  */
 const md5HashBody = function (blob) {
     return new Promise(function (resolve, reject) {
@@ -99,6 +107,8 @@ const md5HashBody = function (blob) {
  * Checks for a given URL if it is allowed to be cached
  * @param url {string}
  * @returns {Promise<boolean>}
+ * @const
+ * @default
  */
 const canBeCached = async function (url) {
     let whitelisted = false;
@@ -125,6 +135,8 @@ const canBeCached = async function (url) {
  * Checks if a given URL is allowed to be updated
  * @param url {string}
  * @returns {Promise<boolean>}
+ * @const
+ * @default
  */
 const canBeUpdated = async function (url) {
     let whitelisted = false;
@@ -151,6 +163,8 @@ const canBeUpdated = async function (url) {
  * Caches a response given the request/URL
  * @param request {Request|string}
  * @param response {Response}
+ * @const
+ * @default
  */
 const cacheResponse = async function (request, response) {
     let url;
@@ -172,6 +186,8 @@ const cacheResponse = async function (request, response) {
  * @param request {Request|string}
  * @param options {Object}
  * @returns {Promise<Response>|null}
+ * @const
+ * @default
  */
 const fetchResponse = async function (request, options = null) {
     if (navigator.onLine) {
@@ -192,11 +208,19 @@ const fetchResponse = async function (request, options = null) {
  * Used as "Event handler" for update events
  * @param type {number}
  * @param message {Object}
+ * @const
+ * @default
  */
 const postMessages = async function (type, message) {
     self.postMessage({type: type, message: message});
 };
 
+/**
+ * Callbacks which are registered via the config class
+ * @const
+ * @default
+ * @type {Array}
+ */
 const callbacks = [];
 
 /**
@@ -601,6 +625,8 @@ callbacks["requestServerHash"] = function (url) {
  * Responds to an install event received.
  * Since install happens after page load, it is important not to be asyncroneous.
  * @param event {Event}
+ * @const
+ * @default
  */
 const installEvent = function (event) {
     event.waitUntil(async function () {
@@ -647,6 +673,8 @@ const installEvent = function (event) {
 /**
  * This is called every time the page is loaded. Therefore, we want to keep it lightweight
  * @param event {Event}
+ * @const
+ * @default
  */
 const activateEvent = function (event) {
     /**
@@ -716,6 +744,8 @@ let isUpdating = false;
 
 /**
  * Checks for updates
+ * @const
+ * @default
  */
 const checkUpdate = async function () {
     if (config.UPDATE_STRATEGY !== 0) {
@@ -740,6 +770,8 @@ const checkUpdate = async function () {
 /**
  * Responds to a fetch event received
  * @param event {FetchEvent}
+ * @const
+ * @default
  */
 const fetchEvent = function (event) {
     /**
@@ -783,18 +815,22 @@ self.addEventListener("activate", activateEvent);
  * @see {@link https://l3tum.github.io/ServiceWorker/api/config|Github Pages} for more information.
  * @param message
  *
- * @example <caption>Example of registering callback</caption>
+ * @example
+ * Example of registering callback via postmessage
+ *
  * mySw.postMessage({
  *  type: 2 <number>,
  *  name: function name <string>,
  *  method: an actual function stringified <function>
  * })
  *
- * @example <caption>Example of changing config value</caption>
+ * @example
+ * Example of changing config value via postmessage
+ *
  * mySw.postMessage({
  *  type: 3 <number>,
- *  field: field name <string>,
- *  value: field value <anything>
+ *  field: "VERSION" <string>,
+ *  value: "1.0.0" <anything>
  * })
  */
 self.onmessage = async function (message) {

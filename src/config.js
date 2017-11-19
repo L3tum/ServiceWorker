@@ -13,31 +13,41 @@
  * Generally simple fields will be replaced, while some objects/arrays will be merged.
  * @class
  *
- * @example <caption>Example of registering callback via postmessage</caption>
+ * @example
+ * Example of registering callback via postmessage
+ *
  * mySw.postMessage({
  *  type: 2 <number>,
  *  name: function name <string>,
  *  method: an actual function stringified <function>
  * })
  *
- * @example <caption>Example of changing config value via postmessage</caption>
+ * @example
+ * Example of changing config value via postmessage
+ *
  * mySw.postMessage({
  *  type: 3 <number>,
- *  field: field name <string>,
- *  value: field value <anything>
+ *  field: "VERSION" <string>,
+ *  value: "1.0.0" <anything>
  * })
  */
 class Config {
+    /**
+     * Constructor for the Config class
+     * @constructor
+     */
     constructor() {
         /**
          * VERSION. Change this if you want to do a force reload
          * @type {string}
+         * @default
          */
         this.VERSION = "1.0.0";
 
         /**
          * Enables debug logs
          * @type {boolean}
+         * @default
          */
         this.developer = true;
 
@@ -46,6 +56,7 @@ class Config {
          * Not really important, so it uses your website adress as default
          * but you can set it to anything
          * @type {string}
+         * @default
          */
         this.CACHE_NAME = location.hostname + "-v";
 
@@ -122,6 +133,7 @@ class Config {
          * If you want to add your own you can specify a callback in $STRATEGY_CALLBACKS anyways,
          * or register it via postMessage
          * @type {number}
+         * @default
          */
         this.STRATEGY = 2;
 
@@ -158,6 +170,7 @@ class Config {
          * 1: Request each file when it was retrieved from cache without slowing down response time
          * 2: Server-request which uses POST: {url:string} to request the server to return a md5 hash of the file like {hash:string}
          * @type {number}
+         * @default
          */
         this.UPDATE_STRATEGY = 1;
 
@@ -179,6 +192,7 @@ class Config {
          * The Server Adress used for 'requestServerHash'. Specify a valid relative or absolute URL
          * which will accept an URL in POST and return a Hash.
          * @type {string}
+         * @default
          */
         this.HASH_ADDRESS = "/gethash";
 
@@ -194,7 +208,7 @@ class Config {
         };
 
         /**
-         * This will store the method names
+         * This will store the methods for the callbacks in stringified format.
          * @type {Object}
          * @example
          * "function(){}"

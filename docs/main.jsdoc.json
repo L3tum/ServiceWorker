@@ -3,11 +3,11 @@
     "comment": "/**\n                         * File is something else, just leave it\n                         */",
     "meta": {
       "range": [
-        11105,
-        11117
+        11405,
+        11417
       ],
       "filename": "index.js",
-      "lineno": 357,
+      "lineno": 381,
       "columnno": 24,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -31,11 +31,11 @@
     "comment": "/**\n                         * File is something else, just leave it\n                         */",
     "meta": {
       "range": [
-        16652,
-        16664
+        16952,
+        16964
       ],
       "filename": "index.js",
-      "lineno": 490,
+      "lineno": 514,
       "columnno": 24,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -56,14 +56,14 @@
     "$longname": "abort"
   },
   {
-    "comment": "/**\n * This is called every time the page is loaded. Therefore, we want to keep it lightweight\n * @param event {Event}\n */",
+    "comment": "/**\n * This is called every time the page is loaded. Therefore, we want to keep it lightweight\n * @param event {Event}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        23101,
-        25474
+        23445,
+        25818
       ],
       "filename": "index.js",
-      "lineno": 651,
+      "lineno": 679,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -86,21 +86,21 @@
         "name": "event"
       }
     ],
+    "kind": "constant",
     "name": "activateEvent",
     "longname": "activateEvent",
-    "kind": "function",
     "scope": "global",
     "$longname": "activateEvent"
   },
   {
-    "comment": "/**\n * Converts a byte array to a string\n * @param array {number}\n * @returns {string}\n */",
+    "comment": "/**\n * Converts a byte array to a string\n * @param array {number}\n * @returns {string}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        2207,
-        2299
+        2273,
+        2365
       ],
       "filename": "index.js",
-      "lineno": 72,
+      "lineno": 78,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -129,9 +129,9 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "bin2String",
     "longname": "bin2String",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "bin2String"
@@ -140,11 +140,11 @@
     "comment": "/**\n             * Cache did not find file\n             */",
     "meta": {
       "range": [
-        13051,
-        13065
+        13351,
+        13365
       ],
       "filename": "index.js",
-      "lineno": 406,
+      "lineno": 430,
       "columnno": 16,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -165,11 +165,11 @@
     "comment": "/**\n             * Cache did not find file\n             */",
     "meta": {
       "range": [
-        18776,
-        18790
+        19076,
+        19090
       ],
       "filename": "index.js",
-      "lineno": 543,
+      "lineno": 567,
       "columnno": 16,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -187,14 +187,14 @@
     "$longname": "cachedInstance"
   },
   {
-    "comment": "/**\n * Caches a response given the request/URL\n * @param request {Request|string}\n * @param response {Response}\n */",
+    "comment": "/**\n * Caches a response given the request/URL\n * @param request {Request|string}\n * @param response {Response}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        4333,
-        4663
+        4487,
+        4817
       ],
       "filename": "index.js",
-      "lineno": 155,
+      "lineno": 169,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -227,257 +227,292 @@
         "name": "response"
       }
     ],
+    "kind": "constant",
     "name": "cacheResponse",
     "longname": "cacheResponse",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "cacheResponse"
   },
   {
-    "comment": "/**\n * Provide cache and if not present provide fetch.\n * Does not update automatically\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
+    "comment": "/**\n * Callbacks which are registered via the config class\n * @const\n * @default\n * @type {Array}\n */",
     "meta": {
       "range": [
-        5693,
-        7466
+        5820,
+        5834
       ],
       "filename": "index.js",
-      "lineno": 208,
-      "columnno": 0,
+      "lineno": 224,
+      "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
-        "id": "astnode100000445",
-        "name": "callbacks[\"cacheFirst\"]",
-        "type": "FunctionExpression",
-        "paramnames": [
-          "event"
-        ]
-      },
-      "vars": {
-        "": null
+        "id": "astnode100000441",
+        "name": "callbacks",
+        "type": "ArrayExpression",
+        "value": "[]"
       }
     },
-    "description": "Provide cache and if not present provide fetch.\nDoes not update automatically",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "FetchEvent"
-          ]
-        },
-        "name": "event"
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Promise.<Response>",
-            "*"
-          ]
-        }
-      }
-    ],
-    "name": "\"cacheFirst\"",
-    "longname": "callbacks.\"cacheFirst\"",
-    "kind": "function",
-    "memberof": "callbacks",
-    "scope": "static",
-    "$longname": "callbacks.\"cacheFirst\""
-  },
-  {
-    "comment": "/**\n * Network first strategy.\n * Since it fetches first-thing it won't need to update\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
-    "meta": {
-      "range": [
-        7624,
-        8265
-      ],
-      "filename": "index.js",
-      "lineno": 266,
-      "columnno": 0,
-      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
-      "code": {
-        "id": "astnode100000586",
-        "name": "callbacks[\"networkFirst\"]",
-        "type": "FunctionExpression",
-        "paramnames": [
-          "event"
-        ]
-      },
-      "vars": {
-        "": null
-      }
+    "description": "Callbacks which are registered via the config class",
+    "kind": "constant",
+    "defaultvalue": "[]",
+    "defaultvaluetype": "array",
+    "type": {
+      "names": [
+        "Array"
+      ]
     },
-    "description": "Network first strategy.\nSince it fetches first-thing it won't need to update",
-    "params": [
+    "name": "callbacks",
+    "longname": "callbacks",
+    "scope": "global",
+    "params": [],
+    "$longname": "callbacks",
+    "$members": [
       {
-        "type": {
-          "names": [
-            "FetchEvent"
-          ]
+        "comment": "/**\n * Provide cache and if not present provide fetch.\n * Does not update automatically\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
+        "meta": {
+          "range": [
+            5993,
+            7766
+          ],
+          "filename": "index.js",
+          "lineno": 232,
+          "columnno": 0,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000445",
+            "name": "callbacks[\"cacheFirst\"]",
+            "type": "FunctionExpression",
+            "paramnames": [
+              "event"
+            ]
+          },
+          "vars": {
+            "": null
+          }
         },
-        "name": "event"
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Promise.<Response>",
-            "*"
-          ]
-        }
-      }
-    ],
-    "name": "\"networkFirst\"",
-    "longname": "callbacks.\"networkFirst\"",
-    "kind": "function",
-    "memberof": "callbacks",
-    "scope": "static",
-    "$longname": "callbacks.\"networkFirst\""
-  },
-  {
-    "comment": "/**\n * Requests a file from the internet and checks if the cached config.VERSION is different\n * @param url {string}\n */",
-    "meta": {
-      "range": [
-        9993,
-        15436
-      ],
-      "filename": "index.js",
-      "lineno": 330,
-      "columnno": 0,
-      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
-      "code": {
-        "id": "astnode100000821",
-        "name": "callbacks[\"requestFileUpdate\"]",
-        "type": "FunctionExpression",
-        "paramnames": [
-          "url"
-        ]
+        "description": "Provide cache and if not present provide fetch.\nDoes not update automatically",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "FetchEvent"
+              ]
+            },
+            "name": "event"
+          }
+        ],
+        "returns": [
+          {
+            "type": {
+              "names": [
+                "Promise.<Response>",
+                "*"
+              ]
+            }
+          }
+        ],
+        "name": "\"cacheFirst\"",
+        "longname": "callbacks.\"cacheFirst\"",
+        "kind": "function",
+        "memberof": "callbacks",
+        "scope": "static",
+        "$longname": "callbacks.\"cacheFirst\""
       },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Requests a file from the internet and checks if the cached config.VERSION is different",
-    "params": [
       {
-        "type": {
-          "names": [
-            "string"
-          ]
+        "comment": "/**\n * Network first strategy.\n * Since it fetches first-thing it won't need to update\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
+        "meta": {
+          "range": [
+            7924,
+            8565
+          ],
+          "filename": "index.js",
+          "lineno": 290,
+          "columnno": 0,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000586",
+            "name": "callbacks[\"networkFirst\"]",
+            "type": "FunctionExpression",
+            "paramnames": [
+              "event"
+            ]
+          },
+          "vars": {
+            "": null
+          }
         },
-        "name": "url"
-      }
-    ],
-    "name": "\"requestFileUpdate\"",
-    "longname": "callbacks.\"requestFileUpdate\"",
-    "kind": "function",
-    "memberof": "callbacks",
-    "scope": "static",
-    "$longname": "callbacks.\"requestFileUpdate\""
-  },
-  {
-    "comment": "/**\n * Requests the hash of a specific file from a specified URL via POST\n * @param url {string}\n */",
-    "meta": {
-      "range": [
-        15540,
-        21363
-      ],
-      "filename": "index.js",
-      "lineno": 463,
-      "columnno": 0,
-      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
-      "code": {
-        "id": "astnode100001181",
-        "name": "callbacks[\"requestServerHash\"]",
-        "type": "FunctionExpression",
-        "paramnames": [
-          "url"
-        ]
+        "description": "Network first strategy.\nSince it fetches first-thing it won't need to update",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "FetchEvent"
+              ]
+            },
+            "name": "event"
+          }
+        ],
+        "returns": [
+          {
+            "type": {
+              "names": [
+                "Promise.<Response>",
+                "*"
+              ]
+            }
+          }
+        ],
+        "name": "\"networkFirst\"",
+        "longname": "callbacks.\"networkFirst\"",
+        "kind": "function",
+        "memberof": "callbacks",
+        "scope": "static",
+        "$longname": "callbacks.\"networkFirst\""
       },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Requests the hash of a specific file from a specified URL via POST",
-    "params": [
       {
-        "type": {
-          "names": [
-            "string"
-          ]
+        "comment": "/**\n * Requests a file from the internet and checks if the cached config.VERSION is different\n * @param url {string}\n */",
+        "meta": {
+          "range": [
+            10293,
+            15736
+          ],
+          "filename": "index.js",
+          "lineno": 354,
+          "columnno": 0,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000821",
+            "name": "callbacks[\"requestFileUpdate\"]",
+            "type": "FunctionExpression",
+            "paramnames": [
+              "url"
+            ]
+          },
+          "vars": {
+            "": null
+          }
         },
-        "name": "url"
-      }
-    ],
-    "name": "\"requestServerHash\"",
-    "longname": "callbacks.\"requestServerHash\"",
-    "kind": "function",
-    "memberof": "callbacks",
-    "scope": "static",
-    "$longname": "callbacks.\"requestServerHash\""
-  },
-  {
-    "comment": "/**\n * Stale while revalidate strategy.\n * Serve a, potentially, outdated file but then check for updates with a fallback to network\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
-    "meta": {
-      "range": [
-        8469,
-        9869
-      ],
-      "filename": "index.js",
-      "lineno": 290,
-      "columnno": 0,
-      "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
-      "code": {
-        "id": "astnode100000666",
-        "name": "callbacks[\"staleWhileRevalidate\"]",
-        "type": "FunctionExpression",
-        "paramnames": [
-          "event"
-        ]
+        "description": "Requests a file from the internet and checks if the cached config.VERSION is different",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "string"
+              ]
+            },
+            "name": "url"
+          }
+        ],
+        "name": "\"requestFileUpdate\"",
+        "longname": "callbacks.\"requestFileUpdate\"",
+        "kind": "function",
+        "memberof": "callbacks",
+        "scope": "static",
+        "$longname": "callbacks.\"requestFileUpdate\""
       },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Stale while revalidate strategy.\nServe a, potentially, outdated file but then check for updates with a fallback to network",
-    "params": [
       {
-        "type": {
-          "names": [
-            "FetchEvent"
-          ]
+        "comment": "/**\n * Requests the hash of a specific file from a specified URL via POST\n * @param url {string}\n */",
+        "meta": {
+          "range": [
+            15840,
+            21663
+          ],
+          "filename": "index.js",
+          "lineno": 487,
+          "columnno": 0,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100001181",
+            "name": "callbacks[\"requestServerHash\"]",
+            "type": "FunctionExpression",
+            "paramnames": [
+              "url"
+            ]
+          },
+          "vars": {
+            "": null
+          }
         },
-        "name": "event"
-      }
-    ],
-    "returns": [
+        "description": "Requests the hash of a specific file from a specified URL via POST",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "string"
+              ]
+            },
+            "name": "url"
+          }
+        ],
+        "name": "\"requestServerHash\"",
+        "longname": "callbacks.\"requestServerHash\"",
+        "kind": "function",
+        "memberof": "callbacks",
+        "scope": "static",
+        "$longname": "callbacks.\"requestServerHash\""
+      },
       {
-        "type": {
-          "names": [
-            "Promise.<Response>",
-            "*"
-          ]
-        }
+        "comment": "/**\n * Stale while revalidate strategy.\n * Serve a, potentially, outdated file but then check for updates with a fallback to network\n * @param event {FetchEvent}\n * @returns {Promise.<Response>|*}\n */",
+        "meta": {
+          "range": [
+            8769,
+            10169
+          ],
+          "filename": "index.js",
+          "lineno": 314,
+          "columnno": 0,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000666",
+            "name": "callbacks[\"staleWhileRevalidate\"]",
+            "type": "FunctionExpression",
+            "paramnames": [
+              "event"
+            ]
+          },
+          "vars": {
+            "": null
+          }
+        },
+        "description": "Stale while revalidate strategy.\nServe a, potentially, outdated file but then check for updates with a fallback to network",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "FetchEvent"
+              ]
+            },
+            "name": "event"
+          }
+        ],
+        "returns": [
+          {
+            "type": {
+              "names": [
+                "Promise.<Response>",
+                "*"
+              ]
+            }
+          }
+        ],
+        "name": "\"staleWhileRevalidate\"",
+        "longname": "callbacks.\"staleWhileRevalidate\"",
+        "kind": "function",
+        "memberof": "callbacks",
+        "scope": "static",
+        "$longname": "callbacks.\"staleWhileRevalidate\""
       }
-    ],
-    "name": "\"staleWhileRevalidate\"",
-    "longname": "callbacks.\"staleWhileRevalidate\"",
-    "kind": "function",
-    "memberof": "callbacks",
-    "scope": "static",
-    "$longname": "callbacks.\"staleWhileRevalidate\""
+    ]
   },
   {
-    "comment": "/**\n * Checks for a given URL if it is allowed to be cached\n * @param url {string}\n * @returns {Promise<boolean>}\n */",
+    "comment": "/**\n * Checks for a given URL if it is allowed to be cached\n * @param url {string}\n * @returns {Promise<boolean>}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        2992,
-        3546
+        3102,
+        3656
       ],
       "filename": "index.js",
-      "lineno": 103,
+      "lineno": 113,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -511,22 +546,22 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "canBeCached",
     "longname": "canBeCached",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "canBeCached"
   },
   {
-    "comment": "/**\n * Checks if a given URL is allowed to be updated\n * @param url {string}\n * @returns {Promise<boolean>}\n */",
+    "comment": "/**\n * Checks if a given URL is allowed to be updated\n * @param url {string}\n * @returns {Promise<boolean>}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        3667,
-        4208
+        3799,
+        4340
       ],
       "filename": "index.js",
-      "lineno": 129,
+      "lineno": 141,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -560,22 +595,22 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "canBeUpdated",
     "longname": "canBeUpdated",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "canBeUpdated"
   },
   {
-    "comment": "/**\n * Checks for updates\n */",
+    "comment": "/**\n * Checks for updates\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        25849,
-        26453
+        26215,
+        26819
       ],
       "filename": "index.js",
-      "lineno": 720,
+      "lineno": 750,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -591,9 +626,9 @@
       }
     },
     "description": "Checks for updates",
+    "kind": "constant",
     "name": "checkUpdate",
     "longname": "checkUpdate",
-    "kind": "function",
     "scope": "global",
     "params": [],
     "async": true,
@@ -603,11 +638,11 @@
     "comment": "/**\n * Timeout register for checkUpdate.\n * Used to cancel it if fetch is received.\n * @type {null|number}\n */",
     "meta": {
       "range": [
-        25592,
-        25617
+        25936,
+        25961
       ],
       "filename": "index.js",
-      "lineno": 709,
+      "lineno": 737,
       "columnno": 4,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -635,11 +670,11 @@
     "comment": "/**\n             * Cache did not find anything\n             */",
     "meta": {
       "range": [
-        6834,
-        6881
+        7134,
+        7181
       ],
       "filename": "index.js",
-      "lineno": 240,
+      "lineno": 264,
       "columnno": 16,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -662,11 +697,11 @@
     "comment": "/**\n                     * Cache response\n                     */",
     "meta": {
       "range": [
-        6516,
-        6560
+        6816,
+        6860
       ],
       "filename": "index.js",
-      "lineno": 229,
+      "lineno": 253,
       "columnno": 24,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -689,11 +724,11 @@
     "comment": "/**\n                     * Cache response\n                     */",
     "meta": {
       "range": [
-        7243,
-        7287
+        7543,
+        7587
       ],
       "filename": "index.js",
-      "lineno": 250,
+      "lineno": 274,
       "columnno": 24,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -742,14 +777,14 @@
     "$longname": "config"
   },
   {
-    "comment": "/**\n * Responds to a fetch event received\n * @param event {FetchEvent}\n */",
+    "comment": "/**\n * Responds to a fetch event received\n * @param event {FetchEvent}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        26537,
-        27380
+        26925,
+        27768
       ],
       "filename": "index.js",
-      "lineno": 744,
+      "lineno": 776,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -773,21 +808,21 @@
         "name": "event"
       }
     ],
+    "kind": "constant",
     "name": "fetchEvent",
     "longname": "fetchEvent",
-    "kind": "function",
     "scope": "global",
     "$longname": "fetchEvent"
   },
   {
-    "comment": "/**\n * Fetches a request only if we may be online (since navigator.onLine is funky)\n * @param request {Request|string}\n * @param options {Object}\n * @returns {Promise<Response>|null}\n */",
+    "comment": "/**\n * Fetches a request only if we may be online (since navigator.onLine is funky)\n * @param request {Request|string}\n * @param options {Object}\n * @returns {Promise<Response>|null}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        4859,
-        5241
+        5035,
+        5417
       ],
       "filename": "index.js",
-      "lineno": 176,
+      "lineno": 192,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -830,22 +865,22 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "fetchResponse",
     "longname": "fetchResponse",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "fetchResponse"
   },
   {
-    "comment": "/**\n * Responds to an install event received.\n * Since install happens after page load, it is important not to be asyncroneous.\n * @param event {Event}\n */",
+    "comment": "/**\n * Responds to an install event received.\n * Since install happens after page load, it is important not to be asyncroneous.\n * @param event {Event}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        21528,
-        22969
+        21850,
+        23291
       ],
       "filename": "index.js",
-      "lineno": 605,
+      "lineno": 631,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -868,9 +903,9 @@
         "name": "event"
       }
     ],
+    "kind": "constant",
     "name": "installEvent",
     "longname": "installEvent",
-    "kind": "function",
     "scope": "global",
     "$longname": "installEvent"
   },
@@ -878,11 +913,11 @@
     "comment": "/**\n * Whether it is currently updating. There may sometimes be multiple times this function is called,\n * so this should prevent weird behaviour\n * @type {boolean}\n */",
     "meta": {
       "range": [
-        25792,
-        25810
+        26136,
+        26154
       ],
       "filename": "index.js",
-      "lineno": 715,
+      "lineno": 743,
       "columnno": 4,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -906,14 +941,14 @@
     "$longname": "isUpdating"
   },
   {
-    "comment": "/**\n * Hashes a file given its blob\n * @param blob {Blob}\n * @returns {Promise.<string>|*}\n */",
+    "comment": "/**\n * Hashes a file given its blob\n * @param blob {Blob}\n * @returns {Promise.<string>|*}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        2403,
-        2865
+        2491,
+        2953
       ],
       "filename": "index.js",
-      "lineno": 81,
+      "lineno": 89,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -946,21 +981,21 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "md5HashBody",
     "longname": "md5HashBody",
-    "kind": "function",
     "scope": "global",
     "$longname": "md5HashBody"
   },
   {
-    "comment": "/**\n * Helper to merge configs\n * @param standard {Config}\n * @param user {Config}\n * @returns {Config}\n */",
+    "comment": "/**\n * Helper to merge configs\n * @param standard {Config}\n * @param user {Config}\n * @returns {Config}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        1498,
-        2107
+        1542,
+        2151
       ],
       "filename": "index.js",
-      "lineno": 49,
+      "lineno": 53,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -1003,21 +1038,21 @@
         }
       }
     ],
+    "kind": "constant",
     "name": "merge",
     "longname": "merge",
-    "kind": "function",
     "scope": "global",
     "$longname": "merge"
   },
   {
-    "comment": "/**\n * Posts a message to the currently connected client.\n * Used as \"Event handler\" for update events\n * @param type {number}\n * @param message {Object}\n */",
+    "comment": "/**\n * Posts a message to the currently connected client.\n * Used as \"Event handler\" for update events\n * @param type {number}\n * @param message {Object}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        5408,
-        5511
+        5606,
+        5709
       ],
       "filename": "index.js",
-      "lineno": 196,
+      "lineno": 214,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -1045,22 +1080,22 @@
         "name": "message"
       }
     ],
+    "kind": "constant",
     "name": "postMessages",
     "longname": "postMessages",
-    "kind": "function",
     "scope": "global",
     "async": true,
     "$longname": "postMessages"
   },
   {
-    "comment": "/**\n * Onmessage handler for the worker interface.\n * You can register methods and set values via this method.\n * @see {@link https://l3tum.github.io/ServiceWorker/api/config|Github Pages} for more information.\n * @param message\n *\n * @example <caption>Example of registering callback</caption>\n * mySw.postMessage({\n *  type: 2 <number>,\n *  name: function name <string>,\n *  method: an actual function stringified <function>\n * })\n *\n * @example <caption>Example of changing config value</caption>\n * mySw.postMessage({\n *  type: 3 <number>,\n *  field: field name <string>,\n *  value: field value <anything>\n * })\n */",
+    "comment": "/**\n * Onmessage handler for the worker interface.\n * You can register methods and set values via this method.\n * @see {@link https://l3tum.github.io/ServiceWorker/api/config|Github Pages} for more information.\n * @param message\n *\n * @example\n * Example of registering callback via postmessage\n *\n * mySw.postMessage({\n *  type: 2 <number>,\n *  name: function name <string>,\n *  method: an actual function stringified <function>\n * })\n *\n * @example\n * Example of changing config value via postmessage\n *\n * mySw.postMessage({\n *  type: 3 <number>,\n *  field: \"VERSION\" <string>,\n *  value: \"1.0.0\" <anything>\n * })\n */",
     "meta": {
       "range": [
-        28261,
-        28995
+        28650,
+        29384
       ],
       "filename": "index.js",
-      "lineno": 800,
+      "lineno": 836,
       "columnno": 0,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -1091,8 +1126,8 @@
       }
     ],
     "examples": [
-      "<caption>Example of registering callback</caption>\nmySw.postMessage({\n type: 2 <number>,\n name: function name <string>,\n method: an actual function stringified <function>\n})",
-      "<caption>Example of changing config value</caption>\nmySw.postMessage({\n type: 3 <number>,\n field: field name <string>,\n value: field value <anything>\n})"
+      "Example of registering callback via postmessage\n\nmySw.postMessage({\n type: 2 <number>,\n name: function name <string>,\n method: an actual function stringified <function>\n})",
+      "Example of changing config value via postmessage\n\nmySw.postMessage({\n type: 3 <number>,\n field: \"VERSION\" <string>,\n value: \"1.0.0\" <anything>\n})"
     ],
     "name": "onmessage",
     "longname": "self.onmessage",
@@ -1102,14 +1137,14 @@
     "$longname": "self.onmessage"
   },
   {
-    "comment": "/**\n * Files queued for updating\n * @type {String[]}\n */",
+    "comment": "/**\n * Files queued for updating\n * @type {String[]}\n * @const\n * @default\n */",
     "meta": {
       "range": [
-        1366,
-        1381
+        1388,
+        1403
       ],
       "filename": "index.js",
-      "lineno": 41,
+      "lineno": 43,
       "columnno": 6,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -1125,9 +1160,11 @@
         "Array.<String>"
       ]
     },
+    "kind": "constant",
+    "defaultvalue": "[]",
+    "defaultvaluetype": "array",
     "name": "updateable",
     "longname": "updateable",
-    "kind": "constant",
     "scope": "global",
     "params": [],
     "$longname": "updateable"
