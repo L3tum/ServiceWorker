@@ -1,13 +1,13 @@
 [
   {
-    "comment": "/**\r\n * Configuration\r\n */",
+    "comment": "/**\r\n * Configuration of the Service Worker.\r\n * You can register callbacks in their respective dictionaries, or\r\n * register them via postMessage.\r\n * You can add methods to the service worker via the METHODS object or via postMessage.\r\n *\r\n * The ServiceWorker contains a default configuration that is applicable for most simple websites.\r\n * For details on that look at the respective fields.\r\n * Generally simple fields will be replaced, while some objects/arrays will be merged.\r\n * @class\r\n *\r\n * @example <caption>Example of registering callback via postmessage</caption>\r\n * mySw.postMessage({\r\n *  type: 2 <number>,\r\n *  name: function name <string>,\r\n *  method: an actual function stringified <function>\r\n * })\r\n *\r\n * @example <caption>Example of changing config value via postmessage</caption>\r\n * mySw.postMessage({\r\n *  type: 3 <number>,\r\n *  field: field name <string>,\r\n *  value: field value <anything>\r\n * })\r\n */",
     "meta": {
       "range": [
-        74,
-        5051
+        980,
+        7459
       ],
       "filename": "config.js",
-      "lineno": 8,
+      "lineno": 30,
       "columnno": 0,
       "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
       "code": {
@@ -17,10 +17,14 @@
         "paramnames": []
       }
     },
-    "classdesc": "Configuration",
+    "classdesc": "Configuration of the Service Worker.\rYou can register callbacks in their respective dictionaries, or\rregister them via postMessage.\rYou can add methods to the service worker via the METHODS object or via postMessage.\r\rThe ServiceWorker contains a default configuration that is applicable for most simple websites.\rFor details on that look at the respective fields.\rGenerally simple fields will be replaced, while some objects/arrays will be merged.",
+    "kind": "class",
+    "examples": [
+      "<caption>Example of registering callback via postmessage</caption>\rmySw.postMessage({\r type: 2 <number>,\r name: function name <string>,\r method: an actual function stringified <function>\r})",
+      "<caption>Example of changing config value via postmessage</caption>\rmySw.postMessage({\r type: 3 <number>,\r field: field name <string>,\r value: field value <anything>\r})"
+    ],
     "name": "Config",
     "longname": "Config",
-    "kind": "class",
     "scope": "global",
     "params": [],
     "$longname": "Config",
@@ -29,11 +33,11 @@
         "comment": "/**\r\n         * The cache name.\r\n         * Not really important, so it uses your website adress as default\r\n         * but you can set it to anything\r\n         * @type {string}\r\n         */",
         "meta": {
           "range": [
-            592,
-            634
+            1498,
+            1540
           ],
           "filename": "config.js",
-          "lineno": 28,
+          "lineno": 50,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -61,11 +65,11 @@
         "comment": "/**\r\n         * Enables debug logs\r\n         * @type {boolean}\r\n         */",
         "meta": {
           "range": [
-            358,
-            379
+            1264,
+            1285
           ],
           "filename": "config.js",
-          "lineno": 20,
+          "lineno": 42,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -90,14 +94,14 @@
         "$longname": "Config#developer"
       },
       {
-        "comment": "/**\r\n         * You can dynamically register callbacks by calling\r\n         * sw.postmessage(method, function)\r\n         * Method means the method of the request and function needs to be a valid function,\r\n         * which returns a Promise<Event> and accepts an event.\r\n         * Additionally, the function needs to be JSON stringified in order to work correctly, if you register it via postmessage.\r\n         * You can call other strategy callbacks in your own callback as well, though beware that they return a response and not a request.\r\n         * This is sort of a hook more than a callback.\r\n         * @type {{string:function}}\r\n         */",
+        "comment": "/**\r\n         * These are fetch hooks called when a fetch event was fired.\r\n         * They accept an Event and return an Event to be used further by the STRATEGY_CALLBACKS.\r\n         * The methods need to be registered in either METHODS or via postmessage.\r\n         * @type {{string:function}}\r\n         * @example\r\n         * async function(event){return new FetchEvent();}\r\n         */",
         "meta": {
           "range": [
-            3957,
-            3982
+            5700,
+            5725
           ],
           "filename": "config.js",
-          "lineno": 108,
+          "lineno": 150,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -108,12 +112,15 @@
             "paramnames": []
           }
         },
-        "description": "You can dynamically register callbacks by calling\rsw.postmessage(method, function)\rMethod means the method of the request and function needs to be a valid function,\rwhich returns a Promise<Event> and accepts an event.\rAdditionally, the function needs to be JSON stringified in order to work correctly, if you register it via postmessage.\rYou can call other strategy callbacks in your own callback as well, though beware that they return a response and not a request.\rThis is sort of a hook more than a callback.",
+        "description": "These are fetch hooks called when a fetch event was fired.\rThey accept an Event and return an Event to be used further by the STRATEGY_CALLBACKS.\rThe methods need to be registered in either METHODS or via postmessage.",
         "type": {
           "names": [
             "Object"
           ]
         },
+        "examples": [
+          "async function(event){return new FetchEvent();}"
+        ],
         "name": "FETCH_CALLBACKS",
         "longname": "Config#FETCH_CALLBACKS",
         "kind": "member",
@@ -122,21 +129,53 @@
         "$longname": "Config#FETCH_CALLBACKS"
       },
       {
-        "comment": "/**\r\n         * Enum for the different message types used for reporting\r\n         * @type {{}}\r\n         */",
+        "comment": "/**\r\n         * The Server Adress used for 'requestServerHash'. Specify a valid relative or absolute URL\r\n         * which will accept an URL in POST and return a Hash.\r\n         * @type {string}\r\n         */",
         "meta": {
           "range": [
-            4898,
-            5040
+            6933,
+            6963
           ],
           "filename": "config.js",
-          "lineno": 138,
+          "lineno": 183,
+          "columnno": 8,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000106",
+            "name": "this.HASH_ADDRESS",
+            "type": "Literal",
+            "value": "/gethash",
+            "paramnames": []
+          }
+        },
+        "description": "The Server Adress used for 'requestServerHash'. Specify a valid relative or absolute URL\rwhich will accept an URL in POST and return a Hash.",
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "name": "HASH_ADDRESS",
+        "longname": "Config#HASH_ADDRESS",
+        "kind": "member",
+        "memberof": "Config",
+        "scope": "instance",
+        "$longname": "Config#HASH_ADDRESS"
+      },
+      {
+        "comment": "/**\r\n         * Enum for the different message types used for reporting\r\n         * @type {Object}\r\n         */",
+        "meta": {
+          "range": [
+            7097,
+            7272
+          ],
+          "filename": "config.js",
+          "lineno": 189,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
             "id": "astnode100000112",
             "name": "this.MESSAGE_TYPES",
             "type": "ObjectExpression",
-            "value": "{\"undefined\":\"methodToRegister\"}",
+            "value": "{\"undefined\":\"fieldToChange\"}",
             "paramnames": []
           }
         },
@@ -154,14 +193,49 @@
         "$longname": "Config#MESSAGE_TYPES"
       },
       {
-        "comment": "/**\r\n         * URLs to precache. Accepted are only fully qualified Strings of relative or absolute URLs\r\n         */",
+        "comment": "/**\r\n         * This will store the method names\r\n         * @type {Object}\r\n         * @example\r\n         * \"function(){}\"\r\n         */",
         "meta": {
           "range": [
-            1324,
-            1343
+            7431,
+            7448
           ],
           "filename": "config.js",
-          "lineno": 49,
+          "lineno": 202,
+          "columnno": 8,
+          "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
+          "code": {
+            "id": "astnode100000126",
+            "name": "this.METHODS",
+            "type": "ObjectExpression",
+            "value": "{}",
+            "paramnames": []
+          }
+        },
+        "description": "This will store the method names",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "examples": [
+          "\"function(){}\""
+        ],
+        "name": "METHODS",
+        "longname": "Config#METHODS",
+        "kind": "member",
+        "memberof": "Config",
+        "scope": "instance",
+        "$longname": "Config#METHODS"
+      },
+      {
+        "comment": "/**\r\n         * URLs to precache. Accepted are only fully qualified Strings of relative or absolute URLs\r\n         * It will replace the default configuration.\r\n         * @type {string[]}\r\n         */",
+        "meta": {
+          "range": [
+            2680,
+            2699
+          ],
+          "filename": "config.js",
+          "lineno": 81,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -172,7 +246,12 @@
             "paramnames": []
           }
         },
-        "description": "URLs to precache. Accepted are only fully qualified Strings of relative or absolute URLs",
+        "description": "URLs to precache. Accepted are only fully qualified Strings of relative or absolute URLs\rIt will replace the default configuration.",
+        "type": {
+          "names": [
+            "Array.<string>"
+          ]
+        },
         "name": "PRE_CACHE",
         "longname": "Config#PRE_CACHE",
         "kind": "member",
@@ -181,14 +260,14 @@
         "$longname": "Config#PRE_CACHE"
       },
       {
-        "comment": "/**\r\n         * Strategy for the sw to use. Available are:\r\n         * 0: Network First,\r\n         * 1: Cache first,\r\n         * 2: Stale while revalidate\r\n         *\r\n         * While there may be more I don't really see the benefit of adding them.\r\n         * Cache only is basically cache first without checking for network connectivity.\r\n         * Network only is, in my opinion, the worst thing to do.\r\n         *\r\n         * If you want to add your own you can specify a callback in $STRATEGY_CALLBACKS\r\n         * @type {number}\r\n         */",
+        "comment": "/**\r\n         * Strategy for the sw to use. Available are:\r\n         * 0: Network First,\r\n         * 1: Cache first,\r\n         * 2: Stale while revalidate\r\n         *\r\n         * While there may be more I don't really see the benefit of adding them.\r\n         * Cache only is basically cache first without checking for network connectivity.\r\n         * Network only is, in my opinion, the worst thing to do, since you don't necessarily need a SW for that.\r\n         * And nobody can tell me you update something that often and it's that important.\r\n         *\r\n         * If you want to add your own you can specify a callback in $STRATEGY_CALLBACKS anyways,\r\n         * or register it via postMessage\r\n         * @type {number}\r\n         */",
         "meta": {
           "range": [
-            2905,
-            2922
+            4755,
+            4772
           ],
           "filename": "config.js",
-          "lineno": 85,
+          "lineno": 126,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -199,7 +278,7 @@
             "paramnames": []
           }
         },
-        "description": "Strategy for the sw to use. Available are:\r0: Network First,\r1: Cache first,\r2: Stale while revalidate\r\rWhile there may be more I don't really see the benefit of adding them.\rCache only is basically cache first without checking for network connectivity.\rNetwork only is, in my opinion, the worst thing to do.\r\rIf you want to add your own you can specify a callback in $STRATEGY_CALLBACKS",
+        "description": "Strategy for the sw to use. Available are:\r0: Network First,\r1: Cache first,\r2: Stale while revalidate\r\rWhile there may be more I don't really see the benefit of adding them.\rCache only is basically cache first without checking for network connectivity.\rNetwork only is, in my opinion, the worst thing to do, since you don't necessarily need a SW for that.\rAnd nobody can tell me you update something that often and it's that important.\r\rIf you want to add your own you can specify a callback in $STRATEGY_CALLBACKS anyways,\ror register it via postMessage",
         "type": {
           "names": [
             "number"
@@ -213,14 +292,14 @@
         "$longname": "Config#STRATEGY"
       },
       {
-        "comment": "/**\r\n         * Strategy callbacks by type.\r\n         * Make sure that they always return a Promise<Response>\r\n         * @type {{0: networkFirst, 1: cacheFirst, 2: staleWhileRevalidate}}\r\n         */",
+        "comment": "/**\r\n         * Strategy callbacks which are called when a fetch event is fired.\r\n         * They accept an Event and return a Promise<Response>.\r\n         * The methods need to be registered in either METHODS or via postmessage.\r\n         * @type {Object}\r\n         * @example\r\n         * async function(event){return fetch(event.request);}\r\n         */",
         "meta": {
           "range": [
-            3145,
-            3284
+            5149,
+            5288
           ],
           "filename": "config.js",
-          "lineno": 92,
+          "lineno": 136,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -231,12 +310,15 @@
             "paramnames": []
           }
         },
-        "description": "Strategy callbacks by type.\rMake sure that they always return a Promise<Response>",
+        "description": "Strategy callbacks which are called when a fetch event is fired.\rThey accept an Event and return a Promise<Response>.\rThe methods need to be registered in either METHODS or via postmessage.",
         "type": {
           "names": [
             "Object"
           ]
         },
+        "examples": [
+          "async function(event){return fetch(event.request);}"
+        ],
         "name": "STRATEGY_CALLBACKS",
         "longname": "Config#STRATEGY_CALLBACKS",
         "kind": "member",
@@ -245,14 +327,14 @@
         "$longname": "Config#STRATEGY_CALLBACKS"
       },
       {
-        "comment": "/**\r\n         * Blacklist for all files that should not be updated. Can contain RegExp or String.\r\n         * Accepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\r\n         * Generally best practice (IMO) would be to exclude all files that have a fixed config.VERSION,\r\n         * like jQuery and Bootstrap.\r\n         * This also saves a lot of overhead\r\n         * since these files are generally pretty big and take a lot of time to process.\r\n         * @type {string[]}\r\n         */",
+        "comment": "/**\r\n         * Blacklist for all files that should not be updated.\r\n         * Accepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\r\n         * Generally best practice (IMO) would be to exclude all files that have a fixed config.VERSION,\r\n         * like jQuery and Bootstrap.\r\n         * This also saves a lot of overhead since these files are generally pretty big and take a lot of time to process.\r\n         * Will merge with the default configuration.\r\n         * The Strings will be converted into regular expressions.\r\n         * @type {string[]}\r\n         *\r\n         * @example \".*\" will be RegExp(\".*\", \"gi\")\r\n         */",
         "meta": {
           "range": [
-            2307,
-            2333
+            3965,
+            3991
           ],
           "filename": "config.js",
-          "lineno": 70,
+          "lineno": 109,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -263,12 +345,15 @@
             "paramnames": []
           }
         },
-        "description": "Blacklist for all files that should not be updated. Can contain RegExp or String.\rAccepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\rGenerally best practice (IMO) would be to exclude all files that have a fixed config.VERSION,\rlike jQuery and Bootstrap.\rThis also saves a lot of overhead\rsince these files are generally pretty big and take a lot of time to process.",
+        "description": "Blacklist for all files that should not be updated.\rAccepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\rGenerally best practice (IMO) would be to exclude all files that have a fixed config.VERSION,\rlike jQuery and Bootstrap.\rThis also saves a lot of overhead since these files are generally pretty big and take a lot of time to process.\rWill merge with the default configuration.\rThe Strings will be converted into regular expressions.",
         "type": {
           "names": [
             "Array.<string>"
           ]
         },
+        "examples": [
+          "\".*\" will be RegExp(\".*\", \"gi\")"
+        ],
         "name": "UPDATE_BLACKLIST",
         "longname": "Config#UPDATE_BLACKLIST",
         "kind": "member",
@@ -277,14 +362,14 @@
         "$longname": "Config#UPDATE_BLACKLIST"
       },
       {
-        "comment": "/**\r\n         * This is the dictionary for the different strategies.\r\n         * You should add to it directly\r\n         */",
+        "comment": "/**\r\n         * These are the update callbacks which will be called depending on UPDATE_STRATEGY.\r\n         * You can add to them directly or register a callback via postMessage.\r\n         * The methods need to be registered in either METHODS or via postmessage.\r\n         * @type {Object}\r\n         * @example\r\n         * async function(url){}\r\n         */",
         "meta": {
           "range": [
-            4594,
-            4725
+            6571,
+            6702
           ],
           "filename": "config.js",
-          "lineno": 126,
+          "lineno": 172,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -295,7 +380,15 @@
             "paramnames": []
           }
         },
-        "description": "This is the dictionary for the different strategies.\rYou should add to it directly",
+        "description": "These are the update callbacks which will be called depending on UPDATE_STRATEGY.\rYou can add to them directly or register a callback via postMessage.\rThe methods need to be registered in either METHODS or via postmessage.",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "examples": [
+          "async function(url){}"
+        ],
         "name": "UPDATE_CALLBACKS",
         "longname": "Config#UPDATE_CALLBACKS",
         "kind": "member",
@@ -307,11 +400,11 @@
         "comment": "/**\r\n         * Update strategy to use with stale while revalidate\r\n         *\r\n         * Available are:\r\n         *\r\n         * 0: No strategy\r\n         * 1: Request each file when it was retrieved from cache without slowing down response time\r\n         * 2: Server-request which uses POST: {url:string} to request the server to return a md5 hash of the file like {hash:string}\r\n         * @type {number}\r\n         */",
         "meta": {
           "range": [
-            4424,
-            4448
+            6167,
+            6191
           ],
           "filename": "config.js",
-          "lineno": 120,
+          "lineno": 162,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -336,14 +429,14 @@
         "$longname": "Config#UPDATE_STRATEGY"
       },
       {
-        "comment": "/**\r\n         * Whitelist for all files that should be updated. Can contain RegExp or String.\r\n         * Accepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\r\n         * Generally best practice is to allow all and then blacklist the ones you don't want\r\n         * @type {string[]}\r\n         */",
+        "comment": "/**\r\n         * Whitelist for all files that should be updated.\r\n         * Accepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\r\n         * Generally best practice is to allow all and then blacklist the ones you don't want.\r\n         * Will replace the default configuration.\r\n         * The Strings will be converted into regular expressions.\r\n         * @type {string[]}\r\n         *\r\n         * @example \".*\" will be RegExp(\".*\", \"gi\")\r\n         */",
         "meta": {
           "range": [
-            1703,
-            1757
+            3215,
+            3269
           ],
           "filename": "config.js",
-          "lineno": 57,
+          "lineno": 93,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -354,12 +447,15 @@
             "paramnames": []
           }
         },
-        "description": "Whitelist for all files that should be updated. Can contain RegExp or String.\rAccepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\rGenerally best practice is to allow all and then blacklist the ones you don't want",
+        "description": "Whitelist for all files that should be updated.\rAccepted are either relative or absolute URLs or any part of any URL, like certain CDNs or so.\rGenerally best practice is to allow all and then blacklist the ones you don't want.\rWill replace the default configuration.\rThe Strings will be converted into regular expressions.",
         "type": {
           "names": [
             "Array.<string>"
           ]
         },
+        "examples": [
+          "\".*\" will be RegExp(\".*\", \"gi\")"
+        ],
         "name": "UPDATE_WHITELIST",
         "longname": "Config#UPDATE_WHITELIST",
         "kind": "member",
@@ -368,14 +464,14 @@
         "$longname": "Config#UPDATE_WHITELIST"
       },
       {
-        "comment": "/**\r\n         * These URLs won't be cached at all. You'll most likely want videos in there,\r\n         * since they can take up your cache space pretty quickly.\r\n         * Accepted are either Strings or RegExp and can contain any part of the URL or even the full URL.\r\n         * @type {string[]}\r\n         */",
+        "comment": "/**\r\n         * These URLs won't be cached at all. You'll most likely want videos in there,\r\n         * since they can take up your cache space pretty quickly.\r\n         * It will be merged with the default configuration.\r\n         * The Strings will be converted into regular expressions in order to simplify the configuration.\r\n         * @type {string[]}\r\n         *\r\n         * @example \".*\" will be RegExp(\".*\", \"gi\")\r\n         */",
         "meta": {
           "range": [
-            1151,
-            1184
+            2423,
+            2456
           ],
           "filename": "config.js",
-          "lineno": 44,
+          "lineno": 74,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -386,12 +482,15 @@
             "paramnames": []
           }
         },
-        "description": "These URLs won't be cached at all. You'll most likely want videos in there,\rsince they can take up your cache space pretty quickly.\rAccepted are either Strings or RegExp and can contain any part of the URL or even the full URL.",
+        "description": "These URLs won't be cached at all. You'll most likely want videos in there,\rsince they can take up your cache space pretty quickly.\rIt will be merged with the default configuration.\rThe Strings will be converted into regular expressions in order to simplify the configuration.",
         "type": {
           "names": [
             "Array.<string>"
           ]
         },
+        "examples": [
+          "\".*\" will be RegExp(\".*\", \"gi\")"
+        ],
         "name": "URLS_TO_CACHE_BLACKLIST",
         "longname": "Config#URLS_TO_CACHE_BLACKLIST",
         "kind": "member",
@@ -400,14 +499,14 @@
         "$longname": "Config#URLS_TO_CACHE_BLACKLIST"
       },
       {
-        "comment": "/**\r\n         * These specify the URLs to cache (whitelist)\r\n         * @type {string[]}\r\n         */",
+        "comment": "/**\r\n         * These specify the URLs to cache (whitelist).\r\n         * It will replace the default configuration.\r\n         * The Strings will be converted into regular expressions in order to\r\n         * simplify the configuration.\r\n         * @type {string[]}\r\n         *\r\n         * @example \".*\" will be RegExp(\".*\", \"gi\")\r\n         */",
         "meta": {
           "range": [
-            758,
-            819
+            1904,
+            1965
           ],
           "filename": "config.js",
-          "lineno": 34,
+          "lineno": 61,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -418,12 +517,15 @@
             "paramnames": []
           }
         },
-        "description": "These specify the URLs to cache (whitelist)",
+        "description": "These specify the URLs to cache (whitelist).\rIt will replace the default configuration.\rThe Strings will be converted into regular expressions in order to\rsimplify the configuration.",
         "type": {
           "names": [
             "Array.<string>"
           ]
         },
+        "examples": [
+          "\".*\" will be RegExp(\".*\", \"gi\")"
+        ],
         "name": "URLS_TO_CACHE_WHITELIST",
         "longname": "Config#URLS_TO_CACHE_WHITELIST",
         "kind": "member",
@@ -435,11 +537,11 @@
         "comment": "/**\r\n         * VERSION. Change this if you want to do a force reload\r\n         * @type {string}\r\n         */",
         "meta": {
           "range": [
-            238,
-            260
+            1144,
+            1166
           ],
           "filename": "config.js",
-          "lineno": 14,
+          "lineno": 36,
           "columnno": 8,
           "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
           "code": {
@@ -468,11 +570,11 @@
       "comment": "",
       "meta": {
         "range": [
-          94,
-          5048
+          1000,
+          7456
         ],
         "filename": "config.js",
-        "lineno": 9,
+        "lineno": 31,
         "columnno": 4,
         "path": "C:\\Users\\Tom\\PhpstormProjects\\ServiceWorker\\src",
         "code": {

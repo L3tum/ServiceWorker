@@ -29,7 +29,8 @@
     "MESSAGE_TYPES": {
       "0": "receivedUpdate",
       "1": "receivedConfigUpdate",
-      "2": "methodToRegister"
+      "2": "methodToRegister",
+      "3": "fieldToChange"
     },
     "METHODS": {}
   }

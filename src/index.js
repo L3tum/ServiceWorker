@@ -30,6 +30,7 @@ import Config from "config";
 
 /**
  * The config to use
+ * @type {Config}
  */
 var config;
 
@@ -66,7 +67,7 @@ const merge = function (standard, user) {
 /**
  * Converts a byte array to a string
  * @param array {number}
- * @returns {*}
+ * @returns {string}
  */
 const bin2String = async function (array) {
     return String.fromCharCode.apply(String, array);
@@ -96,7 +97,7 @@ const md5HashBody = function (blob) {
 
 /**
  * Checks for a given URL if it is allowed to be cached
- * @param url
+ * @param url {string}
  * @returns {Promise<boolean>}
  */
 const canBeCached = async function (url) {
@@ -122,7 +123,7 @@ const canBeCached = async function (url) {
 
 /**
  * Checks if a given URL is allowed to be updated
- * @param url
+ * @param url {string}
  * @returns {Promise<boolean>}
  */
 const canBeUpdated = async function (url) {
@@ -169,7 +170,7 @@ const cacheResponse = async function (request, response) {
 /**
  * Fetches a request only if we may be online (since navigator.onLine is funky)
  * @param request {Request|string}
- * @param options {{}}
+ * @param options {Object}
  * @returns {Promise<Response>|null}
  */
 const fetchResponse = async function (request, options = null) {
@@ -186,6 +187,12 @@ const fetchResponse = async function (request, options = null) {
     return null;
 };
 
+/**
+ * Posts a message to the currently connected client.
+ * Used as "Event handler" for update events
+ * @param type {number}
+ * @param message {Object}
+ */
 const postMessages = async function (type, message) {
     self.postMessage({type: type, message: message});
 };
@@ -195,7 +202,7 @@ const callbacks = [];
 /**
  * Provide cache and if not present provide fetch.
  * Does not update automatically
- * @param event {Event}
+ * @param event {FetchEvent}
  * @returns {Promise.<Response>|*}
  */
 callbacks["cacheFirst"] = function (event) {
@@ -253,7 +260,7 @@ callbacks["cacheFirst"] = function (event) {
 /**
  * Network first strategy.
  * Since it fetches first-thing it won't need to update
- * @param event
+ * @param event {FetchEvent}
  * @returns {Promise.<Response>|*}
  */
 callbacks["networkFirst"] = function (event) {
@@ -277,7 +284,7 @@ callbacks["networkFirst"] = function (event) {
 /**
  * Stale while revalidate strategy.
  * Serve a, potentially, outdated file but then check for updates with a fallback to network
- * @param event
+ * @param event {FetchEvent}
  * @returns {Promise.<Response>|*}
  */
 callbacks["staleWhileRevalidate"] = function (event) {
@@ -451,7 +458,7 @@ callbacks["requestFileUpdate"] = function (url) {
 
 /**
  * Requests the hash of a specific file from a specified URL via POST
- * @param url
+ * @param url {string}
  */
 callbacks["requestServerHash"] = function (url) {
     return (async(url) => {
@@ -593,7 +600,7 @@ callbacks["requestServerHash"] = function (url) {
 /**
  * Responds to an install event received.
  * Since install happens after page load, it is important not to be asyncroneous.
- * @param event
+ * @param event {Event}
  */
 const installEvent = function (event) {
     event.waitUntil(async function () {
@@ -639,7 +646,7 @@ const installEvent = function (event) {
 
 /**
  * This is called every time the page is loaded. Therefore, we want to keep it lightweight
- * @param event
+ * @param event {Event}
  */
 const activateEvent = function (event) {
     /**
@@ -694,6 +701,11 @@ const activateEvent = function (event) {
     console.log("[ServiceWorker] Active and Ready!");
 };
 
+/**
+ * Timeout register for checkUpdate.
+ * Used to cancel it if fetch is received.
+ * @type {null|number}
+ */
 let checkUpdateTimeout = null;
 /**
  * Whether it is currently updating. There may sometimes be multiple times this function is called,
@@ -727,7 +739,7 @@ const checkUpdate = async function () {
 
 /**
  * Responds to a fetch event received
- * @param event
+ * @param event {FetchEvent}
  */
 const fetchEvent = function (event) {
     /**
@@ -750,12 +762,41 @@ const fetchEvent = function (event) {
     }());
 };
 
+/**
+ * Registers install callback
+ */
 self.addEventListener("install", installEvent);
 
+/**
+ * Registers fetch callback
+ */
 self.addEventListener("fetch", fetchEvent);
 
+/**
+ * Registers activate callback
+ */
 self.addEventListener("activate", activateEvent);
 
+/**
+ * Onmessage handler for the worker interface.
+ * You can register methods and set values via this method.
+ * @see {@link https://l3tum.github.io/ServiceWorker/api/config|Github Pages} for more information.
+ * @param message
+ *
+ * @example <caption>Example of registering callback</caption>
+ * mySw.postMessage({
+ *  type: 2 <number>,
+ *  name: function name <string>,
+ *  method: an actual function stringified <function>
+ * })
+ *
+ * @example <caption>Example of changing config value</caption>
+ * mySw.postMessage({
+ *  type: 3 <number>,
+ *  field: field name <string>,
+ *  value: field value <anything>
+ * })
+ */
 self.onmessage = async function (message) {
     let data = message.data;
 
